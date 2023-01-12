@@ -2,14 +2,16 @@
 apiVersion: {{ .Values.kubeApiVersion }}
 kind: Deployment
 metadata:
-  name: {{ .Values.appName  }}
+  #name: {{ .Values.appName  }}
+  name: "first-child"
 spec:
-  replicas: {{ .Values.replicaCount  }}
+  #replicas: {{ .Values.replicaCount  }}
+  replicas: 1
   selector:
     matchLabels:
-      app: {{ .Values.appName  }}
+      app: "first-child"
   template:
     metadata:
       labels:
-        app: {{ .Values.appName  }}
+        app: "first-child"
 {{- end }}
