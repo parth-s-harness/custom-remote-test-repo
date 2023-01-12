@@ -1,1 +1,1 @@
-{{- include "shared-lib.deployment" }}
+{{- include "shared-lib.deployment" .}}
