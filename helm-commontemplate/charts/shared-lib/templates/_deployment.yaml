@@ -16,7 +16,7 @@ spec:
       labels:
         app: "first-child"
     spec:
-      serviceAccountName: "first-child"
+      # serviceAccountName: "first-child"
       securityContext:
         {}
       containers:
