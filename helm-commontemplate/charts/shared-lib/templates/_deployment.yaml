@@ -1,0 +1,15 @@
+{{- define "shared-lib.deployment" }}
+apiVersion: {{ .Values.kubeApiVersion }}
+kind: Deployment
+metadata:
+  name: {{ .Values.appName  }}
+spec:
+  replicas: {{ .Values.replicaCount  }}
+  selector:
+    matchLabels:
+      app: {{ .Values.appName  }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName  }}
+{{- end }}
