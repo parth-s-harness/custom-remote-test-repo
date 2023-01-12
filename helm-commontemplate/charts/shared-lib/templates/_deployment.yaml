@@ -1,5 +1,6 @@
 {{- define "shared-lib.deployment" }}
-apiVersion: {{ .Values.kubeApiVersion }}
+#apiVersion: {{ .Values.kubeApiVersion }}
+apiVersion: "apps/v1"
 kind: Deployment
 metadata:
   #name: {{ .Values.appName  }}
