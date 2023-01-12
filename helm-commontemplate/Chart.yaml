@@ -1,7 +1,0 @@
-apiVersion: v2
-name: parent-chart
-version: 0.0.1
-description: Parent Helm chart.
-  
-dependencies:
-  - name: "first-child"
