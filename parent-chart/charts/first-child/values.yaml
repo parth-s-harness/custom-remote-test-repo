@@ -4,7 +4,7 @@
 
 appName: "first-child"
 kubeApiVersion: "apps/v1"
-replicaCount: 1
+replicaCount: 2
 
 image:
   imageName: nginx
