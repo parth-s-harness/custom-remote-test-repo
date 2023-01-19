@@ -3,11 +3,11 @@
 apiVersion: "apps/v1"
 kind: Deployment
 metadata:
-  # name: {{ .Values.appName  }}
-  name: "first-child"
+  name: {{ .Values.appName  }}
+  # name: "first-child"
 spec:
-  # replicas: {{ .Values.replicaCount  }}
-  replicas: 1
+  replicas: {{ .Values.replicaCount  }}
+  # replicas: 1
   selector:
     matchLabels:
       app: "first-child"
