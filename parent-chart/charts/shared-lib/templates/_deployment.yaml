@@ -4,9 +4,10 @@ apiVersion: "apps/v1"
 kind: Deployment
 metadata:
   name: {{ .Values.appName  }}
-  release: "{{ .Release.Name }}"
-  harness.io/release: {{ .Release.Name }}
-  app: "first-child"
+  labels: 
+    release: "{{ .Release.Name }}"
+    harness.io/release: {{ .Release.Name }}
+    app: "first-child"
   # name: "first-child"
 spec:
   replicas: {{ .Values.replicaCount  }}
