@@ -1,1 +1,32 @@
-{{- include "shared-lib.deployment" .}}
+{{- define "shared-lib.deployment" }}
+# apiVersion: {{ .Values.kubeApiVersion }}
+apiVersion: "apps/v1"
+kind: Deployment
+metadata:
+  name: {{ .Values.appName  }}
+  labels: 
+    release: "{{ .Release.Name }}"
+    harness.io/release: {{ .Release.Name }}
+    app: "MAIN-first-child"
+  # name: "first-child"
+spec:
+  replicas: {{ .Values.replicaCount  }}
+  # replicas: 1
+  selector:
+    matchLabels:
+      app: "MAIN-first-child"
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: "MAIN-first-child"
+        release: {{ .Release.Name }}
+        harness.io/release: {{ .Release.Name }}
+    spec:
+      # serviceAccountName: "first-child"
+      securityContext:
+        {}
+      containers:
+        - name: nginx-example
+          image: registry.hub.docker.com/library/nginx:latest    
+{{- end }}
