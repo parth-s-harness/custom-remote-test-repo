@@ -6,6 +6,6 @@ version: 0.0.55
 type: application
 
 dependencies:
-  - name: shared-lib
-    version: "1.45.0"
-    repository: file://../shared-lib
+  - name: todolist
+    version: "0.2.0"
+    repository: file://../../../helm/todolist
