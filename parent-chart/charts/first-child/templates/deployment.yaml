@@ -1,4 +1,4 @@
-{{- define "shared-lib.deployment" }}
+{{- define "first-child.deployment" }}
 # apiVersion: {{ .Values.kubeApiVersion }}
 apiVersion: "apps/v1"
 kind: Deployment
