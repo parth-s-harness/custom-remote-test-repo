@@ -1,4 +1,3 @@
-{{- define "first-child.deployment" }}
 # apiVersion: {{ .Values.kubeApiVersion }}
 apiVersion: "apps/v1"
 kind: Deployment
@@ -28,5 +27,4 @@ spec:
         {}
       containers:
         - name: nginx-example
-          image: registry.hub.docker.com/library/nginx:latest    
-{{- end }}
+          image: registry.hub.docker.com/library/nginx:latest   
